@@ -27,7 +27,6 @@ CREATE TABLE `dev_university`.`courses` (
   UNIQUE INDEX `courses_id_UNIQUE` (`courses_id` ASC) VISIBLE)
 ENGINE = InnoDB;
 
-
 CREATE TABLE `dev_university`.`grades` (
   `grades_id` INT NOT NULL AUTO_INCREMENT,
   `grades_score` DECIMAL(5,2) NOT NULL,
@@ -45,8 +44,6 @@ CREATE TABLE `dev_university`.`grades` (
     REFERENCES `dev_university`.`courses` (`courses_id`)
     ON DELETE RESTRICT
     ON UPDATE RESTRICT);
-
-
 
 CREATE TABLE `dev_university`.`enrolstudent` (
   `enrolstudent_id` INT NOT NULL AUTO_INCREMENT,
@@ -81,8 +78,4 @@ CREATE TABLE `dev_university`.`enrolprofessor` (
     REFERENCES `dev_university`.`professors` (`professors_id`)
     ON DELETE RESTRICT
     ON UPDATE RESTRICT);
-
-
-
-
 
